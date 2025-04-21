@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+    <title>Lista de Jugadores</title>
+</head>
+<body>
+   <nav class="navbar navbar-dark bg-dark">
+    <a href="/" class="navbar-brand">
+        <h1>Lista de Jugadores</h1>
+    </a>
+   </nav>
+
+   <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/update/<%= data.id %>" method="post">
+                            <div class="form-group mb-3">
+                                <input type="text" name="nombre" value= "<%= data.nombre %>" class="form-control" placeholder="Nombre del jugador" required> 
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" name="apellidos" value= "<%= data.apellidos %>" class="form-control" placeholder="Apellido del jugador" required> 
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" name="numero" value= "<%= data.numero %>" class="form-control" placeholder="Número del jugador" required> 
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" name="posicion" value= "<%= data.posicion %>" class="form-control" placeholder="Posición del jugador" required> 
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Guardar Jugador
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+   </div>
+
+
+
+
+
+</body>
+</html>
